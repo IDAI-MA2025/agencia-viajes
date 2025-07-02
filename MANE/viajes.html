@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cotización Vacaciones</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <h1>Agencia de Viajes</h1>
+  <form id="formulario">
+    <label>Adultos: <input type="number" id="adultos" min="0" value="0" /></label>
+    <label>Niños: <input type="number" id="niños" min="0" value="0" /></label>
+    <label>Días: <input type="number" id="dias" min="1" value="1" /></label>
+
+    <fieldset>
+      <legend>Servicios</legend>
+      <label><input type="checkbox" id="crucero" /> Crucero ($200 por persona)</label>
+      <label><input type="checkbox" id="extras" /> Extras ($150 por adulto)</label>
+      <label><input type="checkbox" id="hotel" /> Hotel ($80 por día/persona)</label>
+      <label><input type="checkbox" id="estacionamiento" /> Estacionamiento ($50 por día)</label>
+      <label><input type="radio" name="avion" id="avion" /> Avión solo ida ($100 por persona)</label>
+    </fieldset>
+
+    <button type="button" onclick="calcularCotizacion()">Calcular Total</button>
+
+    <h2 id="resultado">Total: $0.00</h2>
+
+    <a id="enviarCorreo" href="#" target="_blank">📧 Enviar por correo</a>
+    <a id="enviarWhatsApp" href="#" target="_blank">📱 Enviar por WhatsApp</a>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
