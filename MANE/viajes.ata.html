@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cotización Vacaciones</title>
+  <link rel="stylesheet" href="estilos ata.css" />
+  <script defer src="script ata.js"></script>
+</head>
+<body>
+   <div class="container">
+    <h1>Alo-TOURS</h1>
+    <form id="cotizacionForm">
+      <label>Nombre: <input type="text" required /></label>
+      <label>Teléfono: <input type="tel" required /></label>
+      <label>Email: <input type="email" required /></label>
+      <label>Dirección: <input type="text" required /></label>
+
+      <fieldset>
+        <legend>Cruceros (por persona)</legend>
+      <label><input type="radio" name="crucero" value="0" checked /> Sin Crucero(+$0)</label>
+      <label><input type="radio" name="crucero" value="2879" /> Sudamérica Colorida(+$2,879)</label>
+      <label><input type="radio" name="crucero" value="3454" /> Europa de Ensueño(+$3,454)</label>
+        <label><input type="radio" name="crucero" value="1840" /> Asia de Tradiciones(+$1,840)</label>
+      <label><input type="radio" name="crucero" value="1069" /> Aventura Caribeña(+$1,069)</label>
+        <label><input type="radio" name="crucero" value="1237" /> Descubriendo Alaska(+$1,237)</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Extras (por adulto)</legend>
+      <label><input type="checkbox" value="300" class="extra" /> Bebidas alcohólicas(+$300)</label>
+        <label><input type="checkbox" value="150" class="extra" /> Clases de buceo(+$150)</label>
+      <label><input type="checkbox" value="500" class="extra" /> Tours de expedición(+$500)</label>
+        <label><input type="checkbox" value="100" class="extra" /> Paquete de fotos(+$100)</label>
+        <label><input type="checkbox" value="250" class="extra" /> Pesca en altamar(+$250)</label>
+      </fieldset>
+
+      <label>Número de adultos: <input type="number" id="adultos" min="0"
+         value="0" required /></label>
+      <label>Número de niños: <input type="number" id="ninos" min="0" value="0" 
+        required /></label>
+
+      <fieldset>
+        <legend>Transporte</legend>
+      <label><input type="radio" name="avion" value="0" checked /> Sin avión(+$0)</label>
+        <label><input type="radio" name="avion" value="100" /> Solo ida(+$100)</label>
+      <label><input type="radio" name="avion" value="150" /> Ida y vuelta(+$150)</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Hotel (por día y persona)</legend>
+      <label><input type="radio" name="hotel" value="0" checked /> Sin hotel(+$0)</label>
+        <label><input type="radio" name="hotel" value="100" /> Habitación sencilla(+$100)</label>
+      <label><input type="radio" name="hotel" value="150" /> Habitación doble(+$150)</label>
+      <label><input type="radio" name="hotel" value="250" /> Suite(+$250)</label>
+        <label>Días de hotel: <input type="number" id="diasHotel" min="0" value="0" /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Estacionamiento (por día)</legend>
+        <label><input type="radio" name="parking" value="0" 
+          checked /> Sin estacionamiento(+$0)</label>
+        <label><input type="radio" name="parking" value="10" /> 
+          Con estacionamiento(+$10)</label>
+      </fieldset>
+
+      <button type="button" onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+      <a id="whatsappLink" href="#" target="_blank">Enviar por WhatsApp</a>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
